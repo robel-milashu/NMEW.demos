@@ -7,7 +7,7 @@
 import numpy as np
 
 from matplotlib import pyplot as plot, colors
-get_ipython().run_line_magic('matplotlib', 'inline')
+# get_ipython().run_line_magic('matplotlib', 'inline')
 
 from mpl_toolkits import basemap
 from netCDF4 import Dataset, num2date
@@ -17,7 +17,7 @@ from netCDF4 import Dataset, num2date
 
 
 # Input file and data visualization settings
-file = 'A202004_CHL_NW_month.nc'
+file = 'results/GS201801_CHL_NW_month.nc'
 varname = 'chlor_a'
 font_size = 20
 cmin, cmax = 0.01, 100
@@ -56,7 +56,8 @@ mask = np.where(~sds.mask, np.nan, 0)
 plot.imshow(mask, cmap='gray', vmin=-1, vmax=1, extent=extent)
 
 # Data
-ims = plot.imshow(sds, cmap='jet', vmin=cmin, vmax=cmax, extent=extent, norm=norm)
+# ims = plot.imshow(sds, cmap='jet', vmin=cmin, vmax=cmax, extent=extent, norm=norm)
+ims = plot.imshow(sds, cmap='jet',  extent=extent, norm=norm)
 
 # Figure labels
 plot.xlabel('Longitude [$^\mathregular{o}$E]')
@@ -69,7 +70,7 @@ plot.colorbar(ims, orientation='horizontal', aspect=20, label=label, format='%g'
 
 # save to file
 svf = f'{file[:-3]}.png'
-plot.savefig(svf, dpi=300)
+# plot.savefig(svf, dpi=300)
 
 # close
 # plot.close()
