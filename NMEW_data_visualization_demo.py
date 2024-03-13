@@ -124,22 +124,21 @@ def momnthy_data(file):
     cbar.set_ticks(ticks)
     cbar.set_ticklabels([f'{ticks[0]:.2f}', f'{ticks[1]:.2f}', f'{ticks[2]:.2f}']) # Format as desired
 
-    # Small Sagami Bay
-
     # plot.savefig("test.png", dpi=300)
+    # plot.savefig(f'./results/daily/Modis/chla/pics/{file.split("/")[-1].split(".")[0]}.png', dpi=300)
     plot.show()
 
 import os
 count = 0
 # iterate folders
-for file in os.listdir(f'./results/Modis/chla/'):
-    print("./results/Modis/chla/"+file)
+for file in os.listdir(f'./results/daily/Modis/chla/'):
+    print("./results/daily/Modis/chla/"+file)
     count += 1
     if count > 5 :
         break
     # check for file extension 
     if file.endswith('.nc'):
-        momnthy_data("./results/Modis/chla/"+file)
+        momnthy_data("./results/daily/Modis/chla/"+file)
 
 
 
