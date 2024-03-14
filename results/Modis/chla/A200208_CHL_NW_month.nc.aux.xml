@@ -1,0 +1,26 @@
+<PAMDataset>
+  <Subdataset name="chlor_a">
+    <PAMDataset>
+      <PAMRasterBand band="1">
+        <Metadata>
+          <MDI key="STATISTICS_MAXIMUM">85.545486450195</MDI>
+          <MDI key="STATISTICS_MEAN">0.41692158886569</MDI>
+          <MDI key="STATISTICS_MINIMUM">0.0010000000474975</MDI>
+          <MDI key="STATISTICS_STDDEV">1.4960643758493</MDI>
+        </Metadata>
+      </PAMRasterBand>
+    </PAMDataset>
+  </Subdataset>
+  <Subdataset name="valid_pixel_count">
+    <PAMDataset>
+      <PAMRasterBand band="1">
+        <Metadata>
+          <MDI key="STATISTICS_MAXIMUM">13</MDI>
+          <MDI key="STATISTICS_MEAN">3.8815923760862</MDI>
+          <MDI key="STATISTICS_MINIMUM">1</MDI>
+          <MDI key="STATISTICS_STDDEV">1.9339800728293</MDI>
+        </Metadata>
+      </PAMRasterBand>
+    </PAMDataset>
+  </Subdataset>
+</PAMDataset>
